@@ -1,0 +1,17 @@
+<div class="columns">
+  <!-- Begin grid column -->
+  <div *ngFor="let card of _cardsArray" (click)="routing(card.id)" id="{{card.id}}" class="column col-3">
+    <div class="card movie-card interactable">
+      <div class="card-body">
+        <img class="movie-poster" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{card.poster_path}}">
+      </div>
+      <div class="card-header">
+        <button class="btn btn-primary float-right movie-rating">{{card.vote_average}}</button>
+        <div class="card-title h5 movie-card-title">{{card.title}}</div>
+        <div class="card-subtitle text-grey movie-release-date">{{card.release_date}}</div>
+      </div>
+      <div class="card-body movie-summary">{{card.overview}}</div>
+    </div>
+  </div>
+  <!-- End grid column -->
+</div>

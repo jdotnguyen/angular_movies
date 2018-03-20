@@ -1,0 +1,24 @@
+<!-- Begin top header -->
+<header class="navbar">
+  <section class="navbar-section">
+    <a routerLink="/movies/now_playing" class="btn btn-link navigation-link interactable">Now Playing</a>
+    <a routerLink="/movies/popular" class="btn btn-link navigation-link interactable">Popular</a>
+    <a routerLink="/movies/top_rated" class="btn btn-link navigation-link interactable">Top Rated</a>
+    <a routerLink="/movies/upcoming" class="btn btn-link navigation-link interactable">Upcoming</a>
+  </section>
+<section class="navbar-center">
+  <div class="top-brand">AMP</div>
+</section>
+<section class="navbar-section">
+  <div class="input-group input-inline">
+    <input class="form-input" id="search" type="text" placeholder="Search">
+    <button class="btn btn-primary input-group-btn" id="searchbtn">
+      <i class="icon icon-search"></i>
+    </button>
+  </div>
+</section>
+</header>
+<!-- End top header -->
+<div class="container grid-xl">
+  <router-outlet></router-outlet>
+</div>

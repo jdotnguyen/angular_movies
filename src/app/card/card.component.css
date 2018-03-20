@@ -1,0 +1,29 @@
+/*
+ *
+ * Movie card
+ *
+ */
+
+.movie-card {
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.movie-card-title {
+  min-height: 90px;
+}
+
+.movie-summary {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-height: 1.5em;
+  max-height: 5.7em;
+}
+
+.movie-poster,
+.cast-poster {
+  width: 100%;
+}

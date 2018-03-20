@@ -1,0 +1,269 @@
+/*
+ *
+ * Main elements
+ * 
+ */
+body {
+	background-color:#e8e8e8;
+    font-family: 'Roboto';
+}
+.interactable {
+    cursor:pointer;
+    transition-duration:0.2s;
+}
+.interactable:hover {
+    opacity:0.6;
+}
+.navbar {
+    padding: 22px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #f8f9fa;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    z-index: 10;
+}
+.top-brand {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 13px 27.5px;
+}
+.navigation-link:hover, .navigation-link.active {
+    background-color:#e8e8e8;
+    font-weight:bold;
+    text-decoration:none;
+}
+.container.grid-xl {
+    margin-top:100px;
+}
+
+
+/*
+ *
+ * Content
+ *
+ */
+.content-body {
+	margin-top:80px;
+	padding:15px;
+    -ms-flex: 0 1 auto;
+    position: relative;
+    display: inline-block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    z-index: 1;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*
+ *
+ * Movie card
+ *
+ */
+.movie-card {
+    margin-bottom:15px;
+    padding-bottom:20px;
+}
+.movie-card-title {
+	min-height:90px;
+}
+.movie-summary {
+	overflow: hidden;
+   	text-overflow: ellipsis;
+   	display: -webkit-box;
+   	-webkit-box-orient: vertical;
+   	-webkit-line-clamp: 3;
+    line-height: 1.5em;
+    max-height: 5.7em;
+}
+.movie-poster, .cast-poster {
+	width:100%;
+}
+
+/*
+ *
+ * Search results
+ *
+ */
+.search-result-card {
+    margin-bottom:15px;
+}
+.search-results-movie-title {
+    font-size:1.1em;
+    display:inline-block;
+}
+.search-results-movie-rating-btn {
+    -webkit-appearance:none;
+    border:0;
+    float:right;
+}
+.search-results-movie-rating {
+    font-size:2em;
+    padding:10px;
+    width:80px;
+}
+.search-results-movie-summary {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.5em;
+    max-height: 2.8em;
+}
+
+/*
+ *
+ * Genre results
+ *
+ */
+.genre-result-card {
+    margin-bottom:15px;
+}
+.genre-results-movie-title {
+    font-size:1.1em;
+    display:inline-block;
+}
+.genre-results-movie-rating-btn {
+    -webkit-appearance:none;
+    border:0;
+    float:right;
+}
+.genre-results-movie-rating {
+    font-size:2em;
+    padding:10px;
+    width:80px;
+}
+.genre-results-movie-summary {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.5em;
+    max-height: 2.8em;
+}
+
+/*
+ *
+ * Company results
+ *
+ */
+.company-result-card {
+    margin-bottom:15px;
+}
+.company-results-movie-title {
+    font-size:1.1em;
+    display:inline-block;
+}
+.company-results-movie-rating-btn {
+    -webkit-appearance:none;
+    border:0;
+    float:right;
+}
+.company-results-movie-rating {
+    font-size:2em;
+    padding:10px;
+    width:80px;
+}
+.company-results-movie-summary {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 1.5em;
+    max-height: 2.8em;
+}
+
+/*
+ *
+ * Movie details
+ *
+ */
+.movie-details-information-card {
+    margin-top:15px;
+}
+
+.movie-details-title {
+    font-size:3em;
+    display:inline-block;
+}
+.movie-details-rating-btn {
+    color:#ffffff;
+    float:right;
+}
+.movie-details-rating-btn, .movie-details-genre-button, .movie-details-company-button {
+	-webkit-appearance:none;
+	border:0;
+    padding-left:0;
+}
+.movie-details-rating {
+    color:#ffffff;
+    font-size:2em;
+    padding:10px;
+}
+
+.movie-details-cast-section-card {
+    margin-top:15px;
+}
+.movie-details-cast-card {
+    margin-top:15px;
+}
+.movie-details-cast-header {
+    font-size:2em;
+}
+.movie-details-cast-image {
+    width:100%;
+}
+.movie-details-cast-real-name {
+    font-weight:bold;
+}
+.movie-details-cast-character-name {
+    font-weight:lighter;
+    min-height:48px;
+}
+
+.movie-details-trailers-card {
+    margin-top:15px;
+}
+.movie-details-trailers-header {
+    font-size:2em;
+}
+
+.movie-details-studio-header {
+    font-size:2em;
+}
+.movie-details-similar-movies-list-card {
+    margin-top:15px;
+}
+.movie-details-similar-movies-header {
+    font-size:2em;
+}
+
+/*
+ *
+ * Cast details
+ *
+ */
+.cast-details-card {
+    margin-top:15px;
+}
+
+.cast-details-title {
+    font-size:3em;
+    display:inline-block;
+}
+.cast-details-studio-header {
+    font-size:2em;
+}
+
+.cast-details-known-for-list-card {
+    margin-top:15px;
+}

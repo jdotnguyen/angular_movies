@@ -1,0 +1,93 @@
+<div class="columns">
+  <div class="column col-3">
+    <div class="card">
+      <div class="card-body">
+        <img class="movie-poster movie-details-poster" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{_movieDetailsArray.poster_path}}">
+      </div>
+    </div>
+    <div class="card movie-details-card movie-details-information-card">
+      <div class="card-body">
+        <div class="movie-details-studio-header">Information</div>
+        <br>
+        <b>Runtime:</b>
+        <div class="movie-details-studio-runtime">{{_movieDetailsArray.runtime}} mins</div>
+        <br>
+        <b>Budget: </b>
+        <div class="movie-details-studio-budget">{{_movieDetailsArray.budget | currency:"USD"}}</div>
+        <br>
+        <b>Production companies: </b>
+        <div class="movie-details-studio-companies">
+          <button *ngFor="let company of _movieDetailsArray.production_companies" type="button" class="movie-details-company-button">
+            <span class="label label-primary label-rounded movie-details-company-chip interactable">{{company.name}}</span>
+          </button>
+        </div>
+        <br>
+        <b>Production countries: </b>
+        <div class="movie-details-studio-countries">
+          <button *ngFor="let country of _movieDetailsArray.production_countries" type="button" class="movie-details-company-button">
+            <span class="label label-primary label-rounded movie-details-company-chip interactable">{{country.name}}</span>
+          </button>
+        </div>
+        <br>
+        <b>Languages: </b>
+        <div class="movie-details-studio-languages">
+          <button *ngFor="let language of _movieDetailsArray.spoken_languages" type="button" class="movie-details-company-button">
+            <span class="label label-primary label-rounded movie-details-company-chip interactable">{{language.name}}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column col-5">
+    <div class="card movie-details-card">
+      <div class="card-body">
+        <div class="movie-details-title">{{_movieDetailsArray.title}}</div>&nbsp;&nbsp;(
+        <span class="movie-details-release-date">{{_movieDetailsArray.release_date}}</span>)
+        <button type="button" class="movie-details-rating-btn">
+          <span class="label movie-details-rating">{{_movieDetailsArray.vote_average}}</span>
+        </button>
+        <br>
+        <br>
+        <br>
+        <b class="movie-details-tagline">{{_movieDetailsArray.tagline}}</b>
+        <br>
+        <br>
+        <div class="movie-details-overview">{{_movieDetailsArray.overview}}</div>
+        <br>
+        <div class="movie-details-genres">
+          <button *ngFor="let genre of _movieDetailsArray.genres" type="button" class="movie-details-genre-button">
+            <span class="label label-primary label-rounded movie-details-genre-chip interactable">{{genre.name}}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card movie-details-cast-section-card">
+      <div class="card-body">
+        <div class="movie-details-cast">
+          <div class="movie-details-cast-header">Cast</div>
+          <br>
+          <div class="movie-details-cast-body columns"></div>
+        </div>
+      </div>
+    </div>
+    <div class="card movie-details-card movie-details-trailers-card">
+      <div class="card-body">
+        <div class="movie-details-trailers">
+          <div class="movie-details-trailers-header">Videos</div>
+          <br>
+          <div class="movie-details-trailers-body columns"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column col-4">
+    <div class="card movie-details-card movie-details-similar-movies-card">
+      <div class="card-body">
+        <div class="movie-details-similar-movies-header">Similar Movies</div>
+        <br>
+        <div class="movie-details-similar-movies-list columns">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
