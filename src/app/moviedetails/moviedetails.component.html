@@ -66,7 +66,19 @@
         <div class="movie-details-cast">
           <div class="movie-details-cast-header">Cast</div>
           <br>
-          <div class="movie-details-cast-body columns"></div>
+          <div class="movie-details-cast-body columns">
+            <div *ngFor="let cast of _movieDetailsCastArray; let i=index" class="column col-4 movie-details-cast-card interactable">
+              <div *ngIf="i<6" class="card">
+                <div class="card-image">
+                  <img class="movie-details-cast-image" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{cast.profile_path}}">
+                </div>
+                <div class="card-body">
+                  <div class="movie-details-cast-real-name">{{cast.name}}</div>
+                  <div class="movie-details-cast-character-name">{{cast.character}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

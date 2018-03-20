@@ -16,7 +16,6 @@ export class MoviedetailService {
     return this.http
       .get(this._movieDetailsURL)
       .map((response: Response) => {
-        console.log(response.json());
         return <MovieDetail[]>response.json();
       })
       .catch(this.handleError);

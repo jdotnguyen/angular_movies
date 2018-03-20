@@ -9,6 +9,7 @@ import { AppComponent }         from './app.component';
 import { CardService }          from './card.service';
 import { MessageService }       from './message.service';
 import { MoviedetailService }   from './moviedetail.service';
+import { CastService }          from './cast.service';
 
 import { CardComponent } from './card/card.component';
 import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
@@ -26,7 +27,7 @@ import { MoviedetailsComponent } from './moviedetails/moviedetails.component';
     CardComponent,
     MoviedetailsComponent
   ],
-  providers: [CardService, MoviedetailService, MessageService ],
+  providers: [CardService, MoviedetailService, CastService, MessageService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { MovieDetail } from '../moviedetail';
 import { MoviedetailService } from '../moviedetail.service';
+import { Cast } from '../cast';
+import { CastService } from '../cast.service';
 
 @Component({
   selector: 'app-moviedetails',
@@ -10,9 +12,10 @@ import { MoviedetailService } from '../moviedetail.service';
 })
 export class MoviedetailsComponent implements OnInit {
   _movieDetailsArray: MovieDetail[];
+  _movieDetailsCastArray: Cast[];
   _movieDetailsCompaniesArray: MovieDetail[];
 
-  constructor(private movieDetailService: MoviedetailService, private route: ActivatedRoute, private _router: Router) {
+  constructor(private movieDetailService: MoviedetailService, private castService: CastService, private route: ActivatedRoute, private _router: Router) {
   }
 
   routing(movie_id) {
@@ -28,6 +31,12 @@ export class MoviedetailsComponent implements OnInit {
     this.movieDetailService.getMovieDetails(id)
       .subscribe(
         resultArray => this._movieDetailsArray = resultArray,
+        error => console.log("Error :: " + error)
+      )
+    
+    this.castService.getCasts(id)
+      .subscribe(
+        resultArray => this._movieDetailsCastArray = resultArray,
         error => console.log("Error :: " + error)
       )
   }
